@@ -1,3 +1,3 @@
 This repo will show a basic git workflow for individuals or small teams
 
-This line added by another contributor Eric
+Conflict made in the conflict merge branch.

@@ -1,3 +1,0 @@
-Hier liegt Python und Yaml-File zur Konvertierung der .mdf zu .csv-Daten.
-Konfigurationen werden im yaml-File bestimmt und anschließend Pythonfile ausgeführt.
-Wichtig: Signalnamen müssen vorher aus mdf-Daten (z.B. mit asammdf) ausgelesen werden.

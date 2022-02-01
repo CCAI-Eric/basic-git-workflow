@@ -1,0 +1,38 @@
+env_name: env_aitm                                    # tf2.3
+seed: !!int 0                                     # random initial seed
+
+input_path: 01_data_source/MdlPwr_BatPwr/ # Achtung: richtigen Pfad angeben!
+#relativer Pfad --> Achtung, wo ist das working directory
+output_path: 02_dataset/Mdl_Pwr_MdlBatPwr_test
+array_length: 200
+values_length: 1 # Länge der Parameter (Masse, Temp)
+replace_to_nan: false # true --> nans hinter horizon lenght
+signals:
+  horizon_distance: AitmContnsHorzn_VSlopAFinVectLen
+  samples:
+    values:
+      - AitmCmn_MVeh
+      - AitmContnsHorzn_VSlopAFinVectLen
+      - Cod_Diff_Ratio_Calc
+      - CurbWeight
+      - WhlPA_Circumfer
+      - Tm_AmbAirP
+      - Tm_AmbAirTp
+      - ESOC_SOC
+      - BMS_Batt_Volt
+    arrays_200:
+      - AitmContnsHorzn_AFinValAry200
+      - AitmContnsHorzn_SlopFinValAry200
+      - AitmContnsHorzn_VFinValAry200
+      - AitmContnsHorzn_VSlopAFinPosnAry200
+  labels:
+    values: []
+    arrays_200:
+      - AitmContnsHorzn_NEngAry200
+      - AitmContnsHorzn_TAry200
+      - AitmContnsHorzn_TqEngAry200
+      - AitmContnsHorzn_VVehAry200
+      - AitmContnsHorzn_GrStAry200
+      - AitmContnsHorzn_CurBatAry200
+      - AitmContnsHorzn_StEdrvAry200
+
